@@ -1,0 +1,22 @@
+[
+    {
+        "title": {
+            "ar": "منصة التواصل التعليمي - EduConnect",
+            "en": "EduConnect - Educational Social Platform"
+        },
+        "description": {
+            "ar": "منصة تواصل اجتماعي تعليمية تتيح للمستخدمين نشر المنشورات، التعليق، تصنيف المواضيع، مع لوحة تحكم قوية للمشرفين. تم تطويرها باستخدام HTML، CSS، JavaScript، وPython مع إطار Flask وقاعدة بيانات SQL. تعتمد على RESTful APIs، وتستضيف على منصة Render.",
+            "en": "An educational social networking platform that allows users to post, comment, and categorize topics, with a powerful admin interface. Built with HTML, CSS, JavaScript, Python (Flask), and SQL. Uses RESTful APIs and hosted on Render."
+        },
+        "technologies": [
+            "HTML", "CSS", "JavaScript", "Python", "Flask", "SQL", "RESTful APIs", "Git", "Render"
+        ],
+        "images": [
+            "static/educonnect/1.PNG",
+            "static/educonnect/2.PNG",
+            "static/educonnect/3.PNG"
+        ],
+        "projectLink": "https://educonnect-admin.onrender.com/",
+        "sourceLink": "https://github.com/MohammedBoure/EduConnect-FrontEnd"
+    }
+]

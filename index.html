@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">Portfolio</a>
+            <button class="sidebar-toggle">☰</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" data-lang-key="home">Home</a></li>
+            <li><a href="#about" data-lang-key="about">About</a></li>
+            <li><a href="#skills" data-lang-key="skills">Skills</a></li>
+            <li><a href="#projects" data-lang-key="projects">Projects</a></li>
+            <li><a href="#contact" data-lang-key="contact">Contact</a></li>
+        </ul>
+        <div class="settings">
+            <div class="settings-group-row">
+                <div class="settings-control language-control">
+                    <select id="language-switcher">
+                        <option value="ar">Arabic</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+                <button id="theme-toggle" class="settings-control">
+                    <span class="theme-icon sun">☀</span>
+                    <span class="theme-icon moon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge" data-lang-key="available">Available for Freelance Work</span>
+                    <h1 data-lang-key="hero_greeting">Hello, I'm <span class="gradient-text">Mohammed</span></h1>
+                    <h2 data-lang-key="hero_title">Full Stack Developer and Computer Science Student</h2>
+                    <p class="hero-subtitle" data-lang-key="hero_subtitle">I create modern web and desktop applications using advanced technologies, with comprehensive expertise in front-end, back-end, APIs, and databases.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" data-lang-key="discover_projects">Discover My Projects</a>
+                        <a href="#contact" class="btn btn-secondary" data-lang-key="contact_me">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-lang-key="about">About</h2>
+                    <p class="section-subtitle" data-lang-key="about_subtitle">A passionate developer and university student with over two years of effective software development experience</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="me.jpg" alt="Mohammed">
+                    </div>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p data-lang-key="about_text_1">I am a programmer, Full Stack developer, and Computer Science student. I work on developing websites, desktop applications, and APIs using technologies like React, Next.js, Flask, and Django. I have strong expertise in Python and its advanced libraries, as well as Java and C.</p>
+                            <p data-lang-key="about_text_2">I have advanced knowledge in designing APIs, managing databases like MySQL and PostgreSQL, and working with various data formats such as JSON, CSV, and Excel. I have completed over 10 integrated projects out of 100 projects I’ve worked on and collaborated with more than 5 offline clients.</p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label" data-lang-key="completed_projects">Completed Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label" data-lang-key="satisfied_clients">Clients</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2+</div>
+                                <div class="stat-label" data-lang-key="years_experience">Years of Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-lang-key="skills">Skills</h2>
+                    <p class="section-subtitle" data-lang-key="skills_subtitle">I use a variety of technologies to deliver effective and innovative solutions</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-lang-key="frontend">Frontend Development</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-lang-key="backend">Backend Development</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-lang-key="databases">Databases and Data Formats</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">JSON</span>
+                            <span class="skill-tag">CSV</span>
+                            <span class="skill-tag">Excel</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-lang-key="design">Python Libraries and Analysis Tools</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-lang-key="projects">Projects</h2>
+                    <p class="section-subtitle" data-lang-key="projects_subtitle">A showcase of projects I've built and am proud of</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project cards will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-lang-key="contact">Contact</h2>
+                    <p class="section-subtitle" data-lang-key="contact_subtitle">Have an idea for a project? Contact me, and I’ll help you bring it to life</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 data-lang-key="contact">Get in Touch</h3>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>mohammedbouremouz@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span data-lang-key="location">Algeria, Jijel</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/boor.mo" class="social-link" target="_blank" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://github.com/MohammedBoure" class="social-link" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCtaQIelTioZ_uxo1iX1sa8g" class="social-link" target="_blank" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.upwork.com/freelancers/~01113474ddf12279d8" class="social-link" target="_blank" title="Upwork">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMMcJLJ-YAw-QoNeSnxkGs1XXDfXvb8YlXTA&s" alt="Upwork" />
+                            </a>
+                            <a href="https://www.fiverr.com/bitforge1/buying?source=avatar_menu_profile" class="social-link" target="_blank" title="Fiverr">
+                                <img src="https://cdn.worldvectorlogo.com/logos/fiverr-1.svg" alt="Fiverr" />
+                            </a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for for="name" data-lang-key="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-lang-key="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" data-lang-key="title">Subject</label>
+                            <input type="text" id="title" name="title" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-lang-key="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-lang-key="send_message">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p data-lang-key="footer">© 2025 Mohammed Bouremouz. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
