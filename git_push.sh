@@ -15,7 +15,7 @@ git rm -r --cached ProjectLens
 git commit -F commit_msg
 
 # 5. Get the current branch name dynamically
-#current_branch=$(git symbolic-ref --short HEAD)
+current_branch=$(git symbolic-ref --short HEAD)
 
 # 6. Push to the current branch (to avoid branch name mismatch issues)
-#git push origin "$current_branch"
+git push origin "$current_branch"
