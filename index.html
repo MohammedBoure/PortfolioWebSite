@@ -40,21 +40,17 @@
             <li><a href="#contact" data-lang-key="contact">Contact</a></li>
         </ul>
         <div class="settings">
-            <div class="settings-group-row">
-                <div class="settings-control language-control">
-                    <label for="language-switcher-sidebar" class="settings-label" data-lang-key="language">Language</label>
-                    <select id="language-switcher-sidebar" aria-label="Select Language">
-                        <option value="ar">Arabic</option>
-                        <option value="en" selected>English</option>
-                    </select>
-                </div>
-                <div class="settings-control theme-control">
-                    <label for="theme-toggle-sidebar" class="settings-label" data-lang-key="theme">Theme</label>
-                    <button id="theme-toggle-sidebar" aria-label="Toggle Theme">
-                        <span class="theme-icon sun">☀</span>
-                        <span class="theme-icon moon">🌙</span>
-                    </button>
-                </div>
+            <div class="mobile-settings-control language-control">
+                <select id="language-switcher-sidebar" aria-label="Select Language">
+                    <option value="ar"><i class="fas fa-language"></i> العربية</option>
+                    <option value="en" selected><i class="fas fa-language"></i> English</option>
+                </select>
+            </div>
+            <div class="mobile-settings-control theme-control">
+                <button id="theme-toggle-sidebar" aria-label="Toggle Theme">
+                    <i class="fas fa-sun theme-icon sun"></i>
+                    <i class="fas fa-moon theme-icon moon"></i>
+                </button>
             </div>
         </div>
     </aside>

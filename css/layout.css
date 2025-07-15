@@ -1,28 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap');
 
-:root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --bg-primary: #000000;
-    --bg-secondary: #111111;
-    --bg-tertiary: #1a1a1a;
-    --border-color: #333333;
-}
+        :root {
+            /* الألوان الأساسية */
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            
+            /* النصوص - الوضع الداكن افتراضي */
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #888888;
+            --text-accent: #4facfe;
+            
+            /* الخلفيات - الوضع الداكن افتراضي */
+            --bg-primary: #000000;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1a1a1a;
+            --bg-card: #1e1e1e;
+            --bg-overlay: rgba(0, 0, 0, 0.8);
+            
+            /* الحدود والفواصل */
+            --border-color: #333333;
+            --border-light: #444444;
+            --border-focus: #667eea;
+            
+            /* ألوان الأزرار المحسنة */
+            --button-bg: #2a2a2a;
+            --button-bg-hover: #3a3a3a;
+            --button-border: #444444;
+            --button-border-hover: rgba(255, 255, 255, 0.3);
+            --button-text: #ffffff;
+            --button-text-hover: #ffffff;
+            
+            /* الظلال */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+            
+            /* الانتقالات */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* أحجام الخطوط */
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            
+            /* المساحات */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            
+            /* نصف القطر */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-full: 9999px;
+        }
 
-[data-theme="light"] {
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-tertiary: #e2e8f0;
-    --border-color: #e2e8f0;
-    --primary-gradient: linear-gradient(135deg, #93c5fd 0%, #3b82f6 100%);
-    --secondary-gradient: linear-gradient(135deg, #f9a8d4 0%, #ec4899 100%);
-    --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #06b6d4 100%);
-}
+        /* الوضع الفاتح */
+        [data-theme="light"] {
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --text-accent: #3b82f6;
+            
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #e2e8f0;
+            --bg-card: #ffffff;
+            --bg-overlay: rgba(255, 255, 255, 0.9);
+            
+            --border-color: #e2e8f0;
+            --border-light: #cbd5e1;
+            --border-focus: #3b82f6;
+            
+            /* ألوان الأزرار للوضع الفاتح */
+            --button-bg: #f1f5f9;
+            --button-bg-hover: #e2e8f0;
+            --button-border: #cbd5e1;
+            --button-border-hover: rgba(255, 255, 255, 0.8);
+            --button-text: #1e293b;
+            --button-text-hover: #1e293b;
+            
+            --primary-gradient: linear-gradient(135deg, #93c5fd 0%, #3b82f6 100%);
+            --secondary-gradient: linear-gradient(135deg, #f9a8d4 0%, #ec4899 100%);
+            --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #06b6d4 100%);
+            
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* الوضع الداكن المحسن */
+        [data-theme="dark"] {
+            --text-primary: #f5f5f5;
+            --text-secondary: #aaaaaa;
+            --text-muted: #888888;
+            --text-accent: #4facfe;
+            
+            --bg-primary: #000000;
+            --bg-secondary: #1e1e1e;
+            --bg-tertiary: #121212;
+            --bg-card: #1a1a1a;
+            --bg-overlay: rgba(0, 0, 0, 0.9);
+            
+            --border-color: #444444;
+            --border-light: #555555;
+            --border-focus: #667eea;
+            
+            /* ألوان الأزرار للوضع الداكن */
+            --button-bg: #2a2a2a;
+            --button-bg-hover: #3a3a3a;
+            --button-border: #444444;
+            --button-border-hover: rgba(255, 255, 255, 0.3);
+            --button-text: #ffffff;
+            --button-text-hover: #ffffff;
+            
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
+        }
 
 * {
     margin: 0;
@@ -64,9 +171,10 @@ html[dir="ltr"] body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     position: relative;
     z-index: 10;
+    width: 100%;
 }
 
 .sidebar {
@@ -96,7 +204,7 @@ html[dir="ltr"] .sidebar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .sidebar-toggle {
@@ -112,7 +220,7 @@ html[dir="ltr"] .sidebar {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Maximum 2 projects per row */
     gap: 2rem;
 }
 
@@ -122,4 +230,234 @@ html[dir="ltr"] .sidebar {
     border-radius: 16px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-content {
+    padding: 1rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.project-status {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap */
+    gap: 0.5rem;
+    justify-content: flex-start; /* Align left for LTR, right for RTL */
+}
+
+/* الأزرار المحسنة */
+.project-link {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--button-border);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    flex: 1 1 auto; /* Allow links to grow but wrap */
+    min-width: 120px; /* Ensure links are wide enough */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-link:hover {
+    background: var(--button-bg-hover);
+    border-color: var(--button-border-hover);
+    color: var(--button-text-hover);
+    box-shadow: 0 0 0 1px var(--button-border-hover);
+    transform: translateY(-1px);
+}
+
+.project-link:active {
+    transform: translateY(0);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.pagination-button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--button-border);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    min-width: 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagination-button:hover {
+    background: var(--button-bg-hover);
+    border-color: var(--button-border-hover);
+    color: var(--button-text-hover);
+    box-shadow: 0 0 0 1px var(--button-border-hover);
+    transform: translateY(-1px);
+}
+
+.pagination-button:active {
+    transform: translateY(0);
+}
+
+.pagination-button.active {
+    background: var(--button-bg-hover);
+    border-color: var(--button-border-hover);
+    color: var(--button-text-hover);
+    font-weight: 600;
+    box-shadow: 0 0 0 1px var(--button-border-hover);
+}
+
+.pagination-button:disabled {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    border-color: var(--border-color);
+    box-shadow: none;
+    transform: none;
+}
+
+.pagination-button:disabled:hover {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+    box-shadow: none;
+    transform: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    html[dir="rtl"] body, html[dir="ltr"] body {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .sidebar {
+        transform: translateX(100%);
+        width: 260px;
+    }
+
+    html[dir="ltr"] .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1001;
+    }
+
+    html[dir="ltr"] .sidebar-toggle {
+        right: auto;
+        left: 1rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .pagination {
+        flex-direction: column; /* Stack pagination buttons vertically */
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .pagination-button {
+        width: 100%;
+        max-width: 150px;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .project-links {
+        flex-direction: row; /* Keep links horizontal but wrapped */
+        gap: 0.5rem;
+    }
+
+    .project-link {
+        min-width: 100px; /* Slightly smaller for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .pagination-button {
+        max-width: 120px;
+        font-size: 0.8rem;
+    }
+
+    .project-links {
+        flex-direction: column; /* Stack project links vertically on very small screens */
+        gap: 0.4rem;
+    }
+
+    .project-link {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
 }

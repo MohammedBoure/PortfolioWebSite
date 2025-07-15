@@ -17,6 +17,15 @@
             "static/educonnect/3.PNG"
         ],
         "projectLink": "https://educonnect-admin.onrender.com/",
-        "sourceLink": "https://github.com/MohammedBoure/EduConnect-FrontEnd"
+        "projectLink-dashboard": "https://educonnect-admin.onrender.com/admin.html",
+        "projectLink-youtube-ar":"https://www.youtube.com/watch?v=pf7S52A4D9w",
+        "projectLink-youtube-en":"https://www.youtube.com/watch?v=V9RX2Uvc8KU",
+        "sourceLink": "",
+        "sourceLink-backend": "https://github.com/MohammedBoure/EduConnect-BackEnd",
+        "sourceLink-frontend": "https://github.com/MohammedBoure/EduConnect-FrontEnd",
+        "sourceLink-database": "https://github.com/MohammedBoure/EduConnect-BackEnd/tree/main/database",
+        "sourceLink-documentation": "https://github.com/MohammedBoure/EduConnect-BackEnd/tree/main/docs-APIs",
+        "status": "completed",
+        "date": "2023-10-01"
     }
 ]

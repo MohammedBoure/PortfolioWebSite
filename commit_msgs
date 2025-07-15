@@ -8,3 +8,7 @@ add README.md file and link of site
 -----
 
 fix(ui): improve mobile responsiveness of the interface
+
+-----
+
+feat(ui): add project-related links and improve CSS theme and language support

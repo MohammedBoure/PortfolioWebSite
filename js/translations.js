@@ -6,8 +6,12 @@ async function loadTranslations(lang) {
         if (!response.ok) throw new Error(`Failed to load ${lang}.json: ${response.status}`);
         translations[lang] = await response.json();
         updateContent(lang);
+        renderProjects(lang); // Re-render projects after loading translations
     } catch (error) {
         console.error('Error loading translations:', error);
+        if (lang !== 'en') {
+            loadTranslations('en');
+        }
     }
 }
 
@@ -29,3 +33,17 @@ function updateContent(lang) {
         element.placeholder = translations[lang][key] || element.placeholder;
     });
 }
+
+// Sidebar toggle for small screens
+document.addEventListener('DOMContentLoaded', () => {
+    const lang = document.documentElement.lang || 'en';
+    loadTranslations(lang);
+
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    }
+});
