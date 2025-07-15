@@ -38,6 +38,22 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    -webkit-text-size-adjust: 100%; /* Prevent iOS from zooming text */
+    -ms-text-size-adjust: 100%; /* Prevent Windows browsers from zooming text */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+body {
+    font-family: 'Inter', 'Amiri', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    touch-action: manipulation; /* Prevent pinch-to-zoom on touch devices */
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;

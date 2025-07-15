@@ -21,11 +21,21 @@ function random(min, max) {
 async function loadProjects() {
     try {
         const response = await fetch('projects.json');
-        if (!response.ok) throw new Error(`Failed to load projects.json: ${response.status}`);
+        if (!response.ok) {
+            throw new Error(`Failed to load projects.json: ${response.status}`);
+        }
         projectsData = await response.json();
+        if (!Array.isArray(projectsData)) {
+            throw new Error('projects.json does not contain a valid array');
+        }
         renderProjects(document.documentElement.lang || 'en');
     } catch (error) {
         console.error('Error loading projects:', error);
+        // Fallback: Display placeholder message
+        const projectsGrid = document.querySelector('.projects-grid');
+        if (projectsGrid) {
+            projectsGrid.innerHTML = '<p style="color: var(--text-secondary); text-align: center;">Unable to load projects. Please try again later.</p>';
+        }
     }
 }
 
@@ -37,17 +47,25 @@ function renderProjects(lang) {
     }
     if (!projectsData.length) {
         console.warn('No project data available');
+        projectsGrid.innerHTML = '<p style="color: var(--text-secondary); text-align: center;">No projects available.</p>';
         return;
     }
-    if (!translations[lang]) {
+    if (typeof translations !== 'object' || !translations[lang]) {
         console.warn(`Translations for language "${lang}" not loaded`);
-        return;
+        lang = 'en'; // Fallback to English
     }
+
     projectsGrid.innerHTML = ''; // Clear existing content
     projectsData.forEach(project => {
+        // Validate project data
+        if (!project.title || !project.description || !project.images || !project.technologies) {
+            console.warn('Invalid project data:', project);
+            return;
+        }
+
         // Select title and description based on language
-        const title = project.title[lang] || project.title.en;
-        const description = project.description[lang] || project.description.en;
+        const title = project.title[lang] || project.title.en || 'Untitled Project';
+        const description = project.description[lang] || project.description.en || 'No description available';
 
         // Create project card
         const projectCard = document.createElement('div');
@@ -148,3 +166,6 @@ function renderProjects(lang) {
         projectsGrid.appendChild(projectCard);
     });
 }
+
+// Load projects when DOM is ready
+document.addEventListener('DOMContentLoaded', loadProjects);

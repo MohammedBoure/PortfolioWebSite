@@ -246,19 +246,19 @@ html[dir="ltr"] .language-control::after {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.6rem 1.2rem; /* Improved padding for better button size */
-    background: var(--bg-tertiary); /* Background for better visibility */
+    padding: 0.6rem 1.2rem;
+    background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 600; /* Bolder text */
+    font-weight: 600;
     font-size: 0.9rem;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-link:hover {
-    background: var(--accent-gradient); /* Gradient background on hover */
+    background: var(--accent-gradient);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);
